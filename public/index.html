@@ -232,10 +232,11 @@
             <div class="logo text-2xl font-bold text-indigo-600">StepCart</div>
             <ul class="hidden md:flex space-x-8">
                 <li><a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a></li>
-                <li><a href="shop.html" class="text-gray-700 hover:text-indigo-600 transition">Shop</a></li>
+                <li><a href="shop.html" class="text-gray-700 hover:text-indigo-600 transition">Shop All</a></li>
                 <li><a href="categories.html" class="text-gray-700 hover:text-indigo-600 transition">Categories</a></li>
-                <li><a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About Us</a></li>
                 <li><a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a></li>
+                <li><a href="cart.html" class="text-gray-700 hover:text-indigo-600 transition">Cart</a></li>
             </ul>
             <div class="flex items-center space-x-4">
                 <div class="hidden md:flex space-x-2">
@@ -252,14 +253,24 @@
                     </button>
                 </div>
                 <div class="relative">
-                    <button id="cart-button" class="p-2 text-gray-700 hover:text-indigo-600 transition">
+                    <a href="cart.html" id="cart-button" class="p-2 text-gray-700 hover:text-indigo-600 transition">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count absolute -top-1 -right-1 bg-indigo-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                    </button>
+                    </a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden p-2 text-gray-700">
                     <i class="fas fa-bars"></i>
                 </button>
+                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+                    <ul class="px-4 py-3">
+                        <li><a href="index.html" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a></li>
+                        <li><a href="shop.html" class="block py-2 text-gray-700 hover:text-indigo-600">Shop All</a></li>
+                        <li><a href="categories.html" class="block py-2 text-gray-700 hover:text-indigo-600">Categories</a></li>
+                        <li><a href="about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About Us</a></li>
+                        <li><a href="contact.html" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a></li>
+                        <li><a href="cart.html" class="block py-2 text-gray-700 hover:text-indigo-600">View Cart</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -525,17 +536,17 @@
                 <div>
                     <h4 class="font-semibold mb-4">Shop</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> All Products</a></li>
-                        <li><a href="#" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Featured</a></li>
-                        <li><a href="#" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> New Arrivals</a></li>
-                        <li><a href="#" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Sale</a></li>
+                        <li><a href="shop.html" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> All Products</a></li>
+                        <li><a href="shop.html#featured" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Featured</a></li>
+                        <li><a href="shop.html#new" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> New Arrivals</a></li>
+                        <li><a href="shop.html#sale" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Sale</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">About</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" id="my-account-link" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> My Account</a></li>
-                        <li><a href="#" id="order-history-link" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Order History</a></li>
+                        <li><a href="account.html" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> My Account</a></li>
+                        <li><a href="orders.html" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Order History</a></li>
                         <li><a href="#" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Our Story</a></li>
                         <li><a href="#" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Careers</a></li>
                         <li><a href="#" class="footer-link text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Terms & Conditions</a></li>
@@ -558,9 +569,9 @@
         </div>
     </footer>
     
-    <!-- Cart Modal -->
+    <!-- Single cart modal -->
     <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="absolute right-0 top-0 h-full bg-white w-full max-w-md overflow-y-auto">
+        <div class="absolute right-0 top-0 h-full bg-white w-full max-w-md overflow-y-auto shadow-xl">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="text-2xl font-bold">Your Cart (<span id="cart-count-total">0</span>)</h3>
@@ -569,7 +580,19 @@
                     </button>
                 </div>
                 <div id="cart-items" class="space-y-4 mb-8">
-                    <!-- Cart items will be dynamically inserted here -->
+                    <!-- Sample cart item -->
+                    <div class="cart-item flex items-center py-4 border-b border-gray-100">
+                        <div class="w-16 h-16 bg-gray-50 rounded overflow-hidden mr-3">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4c0baa90-6d95-46ba-a31f-8b25b8faa1dc.png" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-medium text-gray-800">Sample Product</h4>
+                            <div class="text-gray-600 text-sm">1 x $99.99</div>
+                        </div>
+                        <button class="text-gray-400 hover:text-red-500">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="border-t pt-4">
                     <div class="flex justify-between mb-4">
@@ -585,8 +608,7 @@
         </div>
     </div>
 
-    <!-- Cart Modal -->
-    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <!-- Single cart modal remains - duplicate removed -->
         <div class="absolute right-0 top-0 h-full bg-white w-full max-w-md overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
@@ -676,13 +698,61 @@
                             button.classList.remove('bg-green-500', 'hover:bg-green-600');
                             button.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
                         }, 2000);
+
+                        // Add item to cart modal
+                        const productName = this.closest('.product-card').querySelector('h3').textContent;
+                        const productPrice = this.closest('.product-card').querySelector('[class*="text-indigo-600"]').textContent;
+                        const productImage = this.closest('.product-card').querySelector('img').src;
+                        
+                        addToCartModal(productName, productPrice, productImage);
                     });
                 });
-            }, 2500);
 
-            // Page transition handler
-            document.querySelectorAll('a[href^=""]').forEach(link => {
+                // Update cart total
+                function updateCartTotal() {
+                    let total = 0;
+                    document.querySelectorAll('.cart-item').forEach(item => {
+                        const priceText = item.querySelector('.text-gray-600').textContent;
+                        const price = parseFloat(priceText.split('x 
+
+            // Toggle mobile menu
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+                document.body.style.overflow = this.classList.contains('hidden') ? 'auto' : 'hidden';
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!e.target.closest('#mobile-menu') && !e.target.closest('#mobile-menu-button')) {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Handle all page transitions
+            document.querySelectorAll('a[href*=".html"]').forEach(link => {
                 if(!link.href.includes('#')) {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        document.querySelector('.loading-screen').style.display = 'flex';
+                        setTimeout(() => {
+                            window.location.href = link.getAttribute('href');
+                        }, 500);
+                    });
+                }
+            });
                     link.addEventListener('click', (e) => {
                         e.preventDefault();
                         document.querySelector('.loading-screen').style.display = 'flex';
@@ -696,4 +766,3 @@
     </script>
 </body>
 </html>
-
