@@ -233,9 +233,9 @@
             <ul class="hidden md:flex space-x-8">
                 <li><a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a></li>
                 <li><a href="shop.html" class="text-gray-700 hover:text-indigo-600 transition">Shop</a></li>
-                <li><a href="categories.html" class="text-gray-700 hover:text-indigo-600 transition" id="categories-link">Categories</a></li>
+                <li><a href="categories.html" class="text-gray-700 hover:text-indigo-600 transition">Categories</a></li>
                 <li><a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a></li>
-                <li><a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition" id="contact-link">Contact</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a></li>
             </ul>
             <div class="flex items-center space-x-4">
                 <div class="hidden md:flex space-x-2">
@@ -260,15 +260,6 @@
                 <button id="mobile-menu-button" class="md:hidden p-2 text-gray-700">
                     <i class="fas fa-bars"></i>
                 </button>
-                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
-                    <ul class="px-4 py-3">
-                        <li><a href="index.html" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a></li>
-                        <li><a href="shop.html" class="block py-2 text-gray-700 hover:text-indigo-600">Shop</a></li>
-                        <li><a href="categories.html" class="block py-2 text-gray-700 hover:text-indigo-600">Categories</a></li>
-                        <li><a href="about.html" class="block py-2 text-gray-700 hover:text-indigo-600">About</a></li>
-                        <li><a href="contact.html" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a></li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
@@ -685,70 +676,12 @@
                             button.classList.remove('bg-green-500', 'hover:bg-green-600');
                             button.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
                         }, 2000);
-
-                        // Add item to cart modal
-                        const productName = this.closest('.product-card').querySelector('h3').textContent;
-                        const productPrice = this.closest('.product-card').querySelector('[class*="text-indigo-600"]').textContent;
-                        const productImage = this.closest('.product-card').querySelector('img').src;
-                        
-                        addToCartModal(productName, productPrice, productImage);
                     });
                 });
+            }, 2500);
 
-                // Update cart total
-                function updateCartTotal() {
-                    let total = 0;
-                    document.querySelectorAll('.cart-item').forEach(item => {
-                        const priceText = item.querySelector('.text-gray-600').textContent;
-                        const price = parseFloat(priceText.split('x 
-
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-
-            // Handle page transitions
-            document.querySelectorAll('a[href*=".html"]').forEach(link => {
-                if(link.href.includes('categories.html')) {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        // Load categories page content
-                        loadPageContent('categories');
-                    });
-                }
-                if(link.href.includes('about.html')) {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        // Load about page content
-                        loadPageContent('about');
-                    });
-                }
-                if(link.href.includes('contact.html')) {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        // Load contact page content
-                        loadPageContent('contact');
-                    });
-                }
-            });
-
-            function loadPageContent(page) {
-                document.querySelector('.loading-screen').style.display = 'flex';
-                // In a real app, this would fetch HTML content
-                setTimeout(() => {
-                    window.location.href = `${page}.html`;
-                }, 500);
-            }
+            // Page transition handler
+            document.querySelectorAll('a[href^=""]').forEach(link => {
                 if(!link.href.includes('#')) {
                     link.addEventListener('click', (e) => {
                         e.preventDefault();
